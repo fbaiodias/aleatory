@@ -1,0 +1,33 @@
+{
+  "name": "aleatory",
+  "version": "0.0.1",
+  "bin": {
+    "aleatory": "./bin/aleatory.js"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier-standard",
+        "standard --fix",
+        "git add"
+      ]
+    }
+  },
+  "repository": "git@github.com:fbaiodias/aleatory.git",
+  "author": "Francisco Baio Dias <francisco@baiodias.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "glob": "^7.1.2",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier-standard": "^7.0.3",
+    "standard": "^10.0.3"
+  }
+}
