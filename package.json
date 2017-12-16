@@ -1,11 +1,13 @@
 {
   "name": "aleatory",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "bin": {
     "aleatory": "./bin/aleatory.js"
   },
   "scripts": {
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "lint-staged": {
     "linters": {
@@ -25,9 +27,12 @@
     "yargs": "^10.0.3"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^5.2.3",
+    "@commitlint/cli": "^5.2.5",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
     "prettier-standard": "^7.0.3",
+    "semantic-release": "^8.2.0",
     "standard": "^10.0.3"
   }
 }
